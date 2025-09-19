@@ -6,7 +6,7 @@ import os
 
 def calibrate_camera():
     # 设置棋盘格内角点数量和每个方格的真实尺寸
-    pattern = (13, 11)  # 内角点数量 (列, 行)
+    pattern = (9, 6)  # 内角点数量 (列, 行)
     square = 25e-3  # 真实边长，单位米（可根据实际棋盘格尺寸修改）
 
     # 准备世界坐标系中的对象点 (0,0,0), (1,0,0), (2,0,0) ....,(8,5,0)
@@ -165,4 +165,5 @@ if __name__ == "__main__":
     print( "=" * 30 )
 
     if check_snapshots_directory():
+
         calibrate_camera()
